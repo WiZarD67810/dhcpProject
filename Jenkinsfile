@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage('Intall') {
 			steps {
-				sh "echo 'OK'"
+				echo 'OK'
 			}
 		}
 	}
