@@ -1,10 +1,10 @@
 pipeline {
-	agent any
-	stages {
-		stage('Intall') {
-			steps {
-				echo 'OK'
-			}
-		}
-	}
+    agent any
+    stages {
+        stage('Intall') {
+            steps {
+                echo 'OK'
+            }
+        }
+    }
 }
