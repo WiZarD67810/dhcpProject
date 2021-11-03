@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Install stuff') {
             steps {
-                echo 'Installation de la configuration'
+                echo 'Docker compose fail'
             }
         }
     }
