@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Install stuff') {
             steps {
-                echo 'OK'
+                echo 'Installation de la configuration'
             }
         }
     }
