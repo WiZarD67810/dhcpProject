@@ -6,7 +6,6 @@ pipeline {
                 echo 'Installation docker'
                 sh "docker-compose -v"
                 sh "docker -v"
-                sh "docker-compose build"
             }
         }
         stage('Deploy') {
