@@ -14,7 +14,7 @@ pipeline {
             steps {
                 echo 'Deploiement docker'
                 sh "docker-compose up -d"
-		sh "cat /etc/dhcp/dhcp.conf"
+		sh "ls /etc/dhcp"
             }
         }
         stage('Stop') {
