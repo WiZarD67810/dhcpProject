@@ -6,6 +6,7 @@ pipeline {
                 echo 'Installation docker'
                 sh "docker-compose -v"
                 sh "docker -v"
+		sh "docker network prune -f"
                 sh "docker-compose build"
             }
         }
