@@ -6,8 +6,7 @@ pipeline {
                 echo 'Installation docker'
                 sh "docker-compose -v"
                 sh "docker -v"
-                sh "docker-compose stop $(docker-compose ps -qa)"
-                sh "docker-compose stop 'git_dhcpd_1'"
+                sh "docker-compose stop $(docker-compose ps -q)"
 		sh "docker network prune -f"
                 sh "docker-compose build"
             }
