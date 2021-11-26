@@ -7,7 +7,7 @@ pipeline {
                 sh "docker-compose -v"
                 sh "docker -v"
                 sh "docker-compose ps -a"
-                sh "docker-compose stope "git_dhcpd_1""
+                sh "docker-compose stope 'git_dhcpd_1'"
 		sh "docker network prune -f"
                 sh "docker-compose build"
             }
