@@ -15,6 +15,8 @@ pipeline {
             steps {
                 echo 'Deploiement docker'
                 sh "docker-compose up -d"
+                sh "ls"
+                sh "pwd"
             }
         }
         stage('Stop') {
