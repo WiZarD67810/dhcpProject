@@ -18,7 +18,7 @@ pipeline {
                 sh "ls"
                 sh "pwd"
                 sh "ls /etc/dhcp"
-                sh "cat /etc/dhcp/dhcpd.conf"
+                sh "cat /etc/dhcp/dhclient.conf"
             }
         }
         stage('Stop') {
