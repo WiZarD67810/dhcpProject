@@ -17,8 +17,8 @@ pipeline {
                 sh "docker-compose up -d"
                 sh "ls"
                 sh "pwd"
-                sh "ls /etc/dhcp"
-                sh "cat /etc/dhcp/dhclient.conf"
+                sh "cp /dhcp.conf /etc/dhcp/"
+                sh "cat /etc/dhcp/dhcp.conf"
             }
         }
         stage('Stop') {
