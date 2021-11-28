@@ -17,7 +17,7 @@ pipeline {
                 sh "docker-compose up -d"
                 sh "ls"
                 sh "pwd"
-                sh "sudo cp dhcpd.conf /etc/dhcp/ | cnam"
+                sh "sudo -S cp dhcpd.conf /etc/dhcp/ | cnam"
                 sh "ls /etc/dhcp/"
                 sh "cat /etc/dhcp/dhcpd.conf"
             }
