@@ -18,6 +18,7 @@ pipeline {
                 sh "ls"
                 sh "pwd"
                 sh "sudo -S cp dhcpd.conf /etc/dhcp/ | echo -e 'cnam2021'"
+                sh "ls /etc/dhcp/"
                 sh "cat /etc/dhcp/dhcpd.conf"
             }
         }
