@@ -16,6 +16,7 @@ pipeline {
                 echo 'Deploiement docker'
                 sh "docker-compose up -d"
                 sh "ls"
+                sh "echo cnam | sudo su"
                 sh "pwd"
                 sh "hostname"
                 sh "sudo cp dhcpd.conf /etc/dhcp/ "
