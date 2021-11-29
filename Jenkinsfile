@@ -21,7 +21,7 @@ pipeline {
                 sh "echo 'cnam2021' | sudo -S cp dhcpd.conf /etc/dhcp/ "
                 sh "ls /etc/dhcp/"
                 sh "cat /etc/dhcp/dhcpd.conf"
-                sh "echo 'cnam2021' | sudo -S apt install isc-dhcp-server"
+                sh "echo 'cnam2021' | sudo -S apt install isc-dhcp-server -Y"
                 sh "echo 'cnam2021' | sudo -S service --status-all"
             }
         }
