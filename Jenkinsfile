@@ -16,10 +16,9 @@ pipeline {
                 echo 'Deploiement docker'
                 sh "docker-compose up -d"
                 sh "ls"
-                sh "echo 'cnam2021' | sudo -S su"
                 sh "pwd"
                 sh "hostname"
-                sh "cp dhcpd.conf /etc/dhcp/ "
+                sh "echo 'cnam2021' | sudo -S cp dhcpd.conf /etc/dhcp/ "
                 sh "ls /etc/dhcp/"
                 sh "cat /etc/dhcp/dhcpd.conf"
             }
