@@ -19,9 +19,9 @@ pipeline {
                 sh "echo 'cnam2021' | sudo -S su"
                 sh "pwd"
                 sh "hostname"
-                sh "sudo cp dhcpd.conf /etc/dhcp/ "
+                sh "cp dhcpd.conf /etc/dhcp/ "
                 sh "ls /etc/dhcp/"
-                sh "sudo cat /etc/dhcp/dhcpd.conf"
+                sh "cat /etc/dhcp/dhcpd.conf"
             }
         }
         stage('Stop') {
