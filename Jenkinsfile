@@ -21,7 +21,7 @@ pipeline {
                 sh "echo 'cnam2021' | sudo -S cp dhcpd.conf /etc/dhcp/ "
                 sh "ls /etc/dhcp/"
                 sh "cat /etc/dhcp/dhcpd.conf"
-                sh "service dhcpd restart"
+                sh "echo 'cnam2021' | sudo -S service dhcpd restart"
             }
         }
         stage('Stop') {
