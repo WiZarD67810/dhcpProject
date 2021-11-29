@@ -21,7 +21,7 @@ pipeline {
                 sh "hostname"
                 sh "sudo cp dhcpd.conf /etc/dhcp/ "
                 sh "ls /etc/dhcp/"
-                sh "cat /etc/dhcp/dhcpd.conf"
+                sh "sudo cat /etc/dhcp/dhcpd.conf"
             }
         }
         stage('Stop') {
@@ -32,3 +32,4 @@ pipeline {
         }
     }
 }
+
