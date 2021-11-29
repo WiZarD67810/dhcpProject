@@ -22,7 +22,7 @@ pipeline {
                 sh "ls /etc/dhcp/"
                 sh "cat /etc/dhcp/dhcpd.conf"
                 sh "echo 'cnam2021' | sudo -S service --status-all"
-                sh "echo 'cnam2021' | sudo -S apt install -y isc-dhcp-server"
+                sh "echo 'cnam2021' | sudo -S service status isc-dhcp-server.dpkg-new"
             }
         }
         stage('Stop') {
