@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
   dhcpd:
-    image: joebiellik/dhcpd
+    image: networkboot/dhcpd
     restart: unless-stopped
     volumes:
       - ./dhcpd.conf:/etc/dhcp/dhcpd.conf
