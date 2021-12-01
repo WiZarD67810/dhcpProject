@@ -23,7 +23,7 @@ pipeline {
                 sh "cat /etc/dhcp/dhcpd.conf"
                 sh "ls -la /etc/dhcp/dhcpd.conf"
                 sh "echo 'cnam2021' | sudo -S service isc-dhcp-server start"
-                sh "echo 'cnam2021' | sudo -S service isc-dhcp-server status"
+                sh "service isc-dhcp-server status"
 
             }
         }
