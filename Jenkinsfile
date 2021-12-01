@@ -27,6 +27,12 @@ pipeline {
 
             }
         }
+	stage('Test') {
+	    steps {
+		echo 'Docker test'
+		sh 'ifconfig'
+	    }
+	}
         stage('Stop') {
             steps {
                 echo 'Stop docker'
