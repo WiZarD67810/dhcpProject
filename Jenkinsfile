@@ -18,8 +18,8 @@ pipeline {
                 sh "ls"
                 sh "pwd"
                 sh "cd /"
-                sh "hostname"
-                sh "mkdir data"
+                sh "pwd"
+                sh "ls"
                 sh "echo 'cnam2021' | sudo -S cp /var/lib/jenkins/workspace/Git/dhcpd.conf /data/dhcpd.conf "
                 sh "cat /data/dhcpd.conf"
 
