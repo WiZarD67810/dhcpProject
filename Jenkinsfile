@@ -17,7 +17,7 @@ pipeline {
                 sh "docker-compose up -d"
                 sh "ls"
                 sh "pwd"
-                sh "cd /"
+                sh "cd /home/.."
                 sh "pwd"
                 sh "ls"
                 sh "echo 'cnam2021' | sudo -S cp /var/lib/jenkins/workspace/Git/dhcpd.conf /data/dhcpd.conf "
