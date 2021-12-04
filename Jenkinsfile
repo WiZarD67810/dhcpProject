@@ -21,6 +21,7 @@ pipeline {
                 sh "echo cnam2021 | sudo -S cp dhcpd.conf /data"
                 sh "cd data"
                 sh "cat dhcpd.conf"
+                sh "service --list-all"
 
             }
         }
