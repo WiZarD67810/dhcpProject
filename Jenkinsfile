@@ -13,13 +13,13 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh "echo cnam2021 | sudo -S su"
+                sh "sudo -S su"
                 echo 'Deploiement docker'
                 sh "docker-compose up -d"
                 sh "ls"
                 sh "pwd"
                 sh "ls"
-                sh "sudo cp dhcpd.conf /data"
+                sh "echo cnam2021 | sudo -S cp dhcpd.conf /data"
                 sh "ls data"
                 sh "cat /data/dhcpd.conf"
 
