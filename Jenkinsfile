@@ -14,7 +14,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploiement docker'
-                sh "docker-compose up -it --rm --init --net host -v '$(pwd)/data':/data networkboot/dhcpd eth0"
+                sh "docker-compose up -d"
                 sh "ls"
                 sh "pwd"
                 sh "mkdir data"
