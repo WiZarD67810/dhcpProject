@@ -22,7 +22,9 @@ pipeline {
                 sh "cd data"
                 sh "cat dhcpd.conf"
                 sh "service --status-all"
+                sh "cat /etc/default/isc-dhcp-server"
                 sh "service isc-dhcp-server status"
+
 
             }
         }
