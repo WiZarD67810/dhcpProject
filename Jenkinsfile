@@ -23,7 +23,7 @@ pipeline {
                 sh "cat dhcpd.conf"
                 sh "service --status-all"
                 sh "cat /etc/default/isc-dhcp-server"
-                sh "echo 'DHCPDv4_CONF=/etc/dhcp/dhcpd.conf' >> /etc/default/isc-dhcp-server"
+                sh "echo cnam2021 | sudo -S echo 'DHCPDv4_CONF=/etc/dhcp/dhcpd.conf' >> /etc/default/isc-dhcp-server"
                 sh "service isc-dhcp-server restart"               
                 sh "service isc-dhcp-server status"
 
