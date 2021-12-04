@@ -14,14 +14,14 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploiement docker'
-                sh "docker-compose up -d"
+                sh "docker-compose up -it --rm --init --net host -v '$(pwd)/data':/data networkboot/dhcpd eth0"
                 sh "ls"
                 sh "pwd"
-                sh "rm -r data"
-                sh "cd /home/.."
+                sh "mkdir data"
+                sh "cd data"
                 sh "pwd"
                 sh "ls"
-                sh "echo 'cnam2021' | sudo -S cp /var/lib/jenkins/workspace/Git/dhcpd.conf /data/dhcpd.conf "
+                sh "echo 'cnam2021' | sudo -S cp ../dhcpd.conf /data"
                 sh "cat /data/dhcpd.conf"
 
             }
