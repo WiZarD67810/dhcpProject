@@ -13,6 +13,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
+                sh "echo cnam2021 | sudo -S su"
                 echo 'Deploiement docker'
                 sh "docker-compose up -d"
                 sh "ls"
