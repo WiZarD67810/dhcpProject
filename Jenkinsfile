@@ -13,7 +13,6 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh "sudo -S su"
                 echo 'Deploiement docker'
                 sh "docker-compose up -d"
                 sh "ls"
