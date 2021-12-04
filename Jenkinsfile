@@ -19,8 +19,8 @@ pipeline {
                 sh "pwd"
                 sh "ls"
                 sh "echo cnam2021 | sudo -S cp dhcpd.conf /data"
-                sh "ls data"
-                sh "cat /data/dhcpd.conf"
+                sh "cd data"
+                sh "cat dhcpd.conf"
 
             }
         }
