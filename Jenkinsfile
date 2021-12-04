@@ -19,7 +19,7 @@ pipeline {
                 sh "ls"
                 sh "pwd"
                 sh "ls"
-                sh "cp dhcpd.conf /data"
+                sh "sudo cp dhcpd.conf /data"
                 sh "ls data"
                 sh "cat /data/dhcpd.conf"
 
