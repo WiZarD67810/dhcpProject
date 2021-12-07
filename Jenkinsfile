@@ -19,8 +19,10 @@ pipeline {
                 sh "ls"
                 sh "pwd"
                 sh "ls /"
-                sh "cat dhcpd.conf"
-                sh "echo cnam2021 | sudo -S cp dhcpd.conf /data"
+                sh "cd /"
+                sh "ls"
+                ///var/lib/jenkins/workspace/Git
+                //sh "echo cnam2021 | sudo -S cp dhcpd.conf /data"
                 sh "ls -a /bin/../data"
                 sh "service --status-all"
                 sh "service isc-dhcp-server restart"               
