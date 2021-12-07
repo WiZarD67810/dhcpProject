@@ -1,8 +1,8 @@
-version: '3.3'
+version: 'latest'
 
 services:
   dhcpd:
     image: networkboot/dhcpd
     restart: unless-stopped
     volumes:
-      - ./dhcpd.conf:/etc/dhcp/dhcpd.conf
+      - ./dhcpd.conf:/etc/dhcp/dhcpd.conf s
