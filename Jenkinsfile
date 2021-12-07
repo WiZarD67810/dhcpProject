@@ -14,7 +14,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploiement docker'
-                sh "docker-compose run -w='/data'"
+                sh "docker-compose up"
                 sh "ls"
                 sh "pwd"
                 sh "cat dhcpd.conf"
