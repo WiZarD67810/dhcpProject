@@ -14,6 +14,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploiement docker'
+                sh "ls"
                 sh "docker-compose up"
                 sh "rm -r data"
                 sh "ls"
