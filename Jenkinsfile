@@ -14,16 +14,11 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploiement docker'
-                sh "docker-compose up -d"
+                sh "docker-compose run --entrypoint /data"
                 sh "ls"
                 sh "pwd"
-                sh "ls"
-                sh "echo cnam2021 | sudo -S cp dhcpd.conf /data"
-                sh "cd data"
                 sh "cat dhcpd.conf"
                 sh "service --status-all"
-                sh "cat /etc/default/isc-dhcp-server"
-                sh "echo cnam2021 | sudo -S echo DHCPDv4_CONF=/var/lib/jenkins/workspace/Git/data/dhcpd.conf >> /etc/default/isc-dhcp-server"
                 sh "service isc-dhcp-server restart"               
                 sh "service isc-dhcp-server status"
 
