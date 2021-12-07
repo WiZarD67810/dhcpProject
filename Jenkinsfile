@@ -15,9 +15,9 @@ pipeline {
             steps {
                 echo 'Deploiement docker'
                 sh "ls"
-                sh "echo cnam2021 | sudo -S cp dhcpd.conf /data"
+                sh "echo cnam2021 | sudo -S mv dhcpd.conf /data"
                 sh "ls /data"
-                sh "docker-compose up"
+                sh "docker-compose up --net host"
 
 
             } 
