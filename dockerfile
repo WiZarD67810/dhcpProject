@@ -1,3 +1,3 @@
 FROM networkboot/dhcpd
 
-VOLUME /data
+VOLUME ["/data"]
