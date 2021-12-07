@@ -19,6 +19,7 @@ pipeline {
                 sh "ls /"
                 sh "cat dhcpd.conf"
                 sh "echo cnam2021 | sudo -S cp dhcpd.conf /data"
+                sh "ls /data"
                 sh "service --status-all"
                 sh "service isc-dhcp-server restart"               
                 sh "service isc-dhcp-server status"
