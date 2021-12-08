@@ -17,7 +17,7 @@ pipeline {
                 sh "ls"
                 sh "echo cnam2021 | sudo -S mv dhcpd.conf /data"
                 sh "ls /data"
-                sh "docker-compose up --net host"
+                sh "docker-compose up "
 
 
             } 
