@@ -25,7 +25,6 @@ pipeline {
         stage('Stop') {
             steps {
                 echo 'Stop docker'
-                sh "docker-compose down"
             }
         }
     }
