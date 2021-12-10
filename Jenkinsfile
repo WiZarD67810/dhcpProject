@@ -17,7 +17,6 @@ pipeline {
                 sh "ls -la"
                 sh "pwd"
                 sh "ls -la data"
-                sh "cat /data/dhcpd.conf"
                 sh "docker-compose up "
 
 
