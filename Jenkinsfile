@@ -16,6 +16,7 @@ pipeline {
                 echo 'Deploiement docker'
                 sh "ls -la"
                 sh "pwd"
+                sh "echo cnam2021 | sudo -S cp /Git /Git/data"
                 sh "ls -la data"
                 sh "docker-compose up "
 
