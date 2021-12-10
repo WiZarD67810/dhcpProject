@@ -17,7 +17,7 @@ pipeline {
                 sh "ls -la"
                 sh "pwd"
                 sh "ls -la data"
-                sh "docker-compose up "
+                sh "docker-compose up --net=host"
 
 
             } 

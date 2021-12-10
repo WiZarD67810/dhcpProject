@@ -4,7 +4,5 @@ services:
   dhcpd:
     image: networkboot/dhcpd
     restart: unless-stopped
-    args:                                                                      
-      eth0
     volumes:
       - ./data:/data
