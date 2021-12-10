@@ -18,6 +18,7 @@ pipeline {
                 sh "pwd"
                 sh "ls -la data"
                 sh "docker-compose up"
+                sh "ifconfig"
 
 
             } 
