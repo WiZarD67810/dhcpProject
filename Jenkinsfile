@@ -16,6 +16,7 @@ pipeline {
                 echo 'Deploiement docker'
                 sh "ls -la"
                 sh "pwd"
+                sh "ls -la data"
                 sh "docker-compose up "
 
 
