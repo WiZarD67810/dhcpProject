@@ -2,10 +2,6 @@ version: '3.3'
 
 services:
   dhcpd:
-    build: .
-    container_name: dhcp-server
-    network_mode: "host"
-
     image: networkboot/dhcpd
     restart: unless-stopped
     volumes:
