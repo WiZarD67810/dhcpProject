@@ -4,5 +4,14 @@ services:
   dhcpd:
     image: networkboot/dhcpd
     restart: unless-stopped
+    networks:
+      dhcp_network:
+        ipv4_address: "192.168.16.1"
     volumes:
       - ./data:/data
+
+networks:
+  dhcp_network:
+    ipam:
+      config:
+        - subnet: "192.168.16.0/24"
