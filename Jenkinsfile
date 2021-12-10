@@ -16,7 +16,6 @@ pipeline {
                 echo 'Deploiement docker'
                 sh "ls -la"
                 sh "pwd"
-                sh "echo cnam2021 | sudo -S cp dhcpd.conf /data"
                 sh "ls -la data"
                 sh "cat /data/dhcpd.conf"
                 sh "docker-compose up "
