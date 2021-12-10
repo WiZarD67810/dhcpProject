@@ -15,9 +15,7 @@ pipeline {
             steps {
                 echo 'Deploiement docker'
                 sh "ls -la"
-                sh "echo cnam2021 | sudo -S mv var/lib/jenkins/workspace/Git/dhcpd.conf /data"
-                sh "echo cnam2021 | sudo -S cp var/lib/jenkins/workspace/Git/dhcpd.conf /data"
-                sh "ls -la /data"
+                sh "pwd"
                 sh "docker-compose up "
 
 
