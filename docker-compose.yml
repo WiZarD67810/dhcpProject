@@ -5,4 +5,4 @@ services:
     image: networkboot/dhcpd
     restart: unless-stopped
     volumes:
-      - ./var/lib/jenkins/workspace/Git:/data
+      - ./var/lib/jenkins/workspace/Git/dhcpd.conf:/data
