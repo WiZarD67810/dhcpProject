@@ -9,9 +9,3 @@ services:
         ipv4_address: "192.168.16.1"
     volumes:
       - ./data:/data
-
-networks:
-  dhcp_network:
-    ipam:
-      config:
-        - subnet: "192.168.16.0/24"
