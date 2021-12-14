@@ -6,8 +6,15 @@ services:
       context: .
       network: host
     container_name: dhcpdocker
-    image: networkboot/dhcpd
-    restart: unless-stopped
+    networks:
+      dhcp_network:
+        ipv4_address: 192.168.16.2
 
     volumes:
       - ./data:/data
+
+networks:
+  dhcp_network:
+    ipam:
+      config:
+        - subnet: 192.168.16.0/24
