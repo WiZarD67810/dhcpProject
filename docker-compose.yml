@@ -8,6 +8,9 @@ services:
       context: .
       network: host
     container_name: dhcpdocker
+    networks:
+      dhcp_network:
+        ipv4_address: 192.168.16.2
 
     volumes:
       - ./data:/data
