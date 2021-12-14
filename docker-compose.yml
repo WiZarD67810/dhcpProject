@@ -1,10 +1,19 @@
-version: '3.3'
+version: "3.4"
 
 services:
   dhcpd:
-    network_mode: "host"
-    image: networkboot/dhcpd
-    restart: unless-stopped
-
+    build:
+      context: .
+      network: host
+    networks:
+      dhcp_network:
+        ipv4_address: 192.168.16.2
     volumes:
       - ./data:/data
+
+  networks:
+  dhcp_network:
+    ipam:
+      config:
+        - subnet: 192.168.16.0/24
+
