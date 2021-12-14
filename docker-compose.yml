@@ -5,7 +5,7 @@ services:
     build:
       context: .
       network: host
-    contenair_name: dhcpdocker
+    container_name: dhcpdocker
     image: networkboot/dhcpd
     restart: unless-stopped
 
