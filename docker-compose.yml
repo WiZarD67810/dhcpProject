@@ -4,7 +4,7 @@ services:
   dhcpd:
     build:
       context: .
-      network: host
+      network_mode: host
     container_name: dhcpdocker
     networks:
       dhcp_network:
