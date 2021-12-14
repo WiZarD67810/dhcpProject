@@ -1,19 +1,13 @@
-version: "3.4"
+version: '3.4'
 
 services:
   dhcpd:
     build:
       context: .
       network: host
-    networks:
-      dhcp_network:
-        ipv4_address: 192.168.16.2
+    contenair_name: dhcpdocker
+    image: networkboot/dhcpd
+    restart: unless-stopped
+
     volumes:
       - ./data:/data
-
-  networks:
-  dhcp_network:
-    ipam:
-      config:
-        - subnet: 192.168.16.0/24
-
