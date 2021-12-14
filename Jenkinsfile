@@ -18,7 +18,7 @@ pipeline {
                 sh "ls -la"
                 sh "pwd"
                 sh "ls -la data"
-                sh "docker-compose up"
+                sh "docker-compose up -d"
                 sh "ifconfig"
 
 
@@ -27,6 +27,7 @@ pipeline {
         stage('Stop') {
             steps {
                 echo 'Stop docker'
+                sh "docker-compose down"
             }
         }
     }
